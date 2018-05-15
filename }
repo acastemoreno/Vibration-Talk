@@ -1,0 +1,86 @@
+#+TITLE: Resumen Análisis Vibracional
+#+SUBTITLE: Categoría I 
+#+DATE: 2018/05/15（Martes）11:00am
+#+AUTHOR: Albert Castellano Moreno
+#+EMAIL: acastemoreno@gmail.com
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:nil p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:nil todo:t |:t
+#+CREATOR: Emacs 25.2.1
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: es
+#+SELECT_TAGS: export
+
+#+FAVICON: images/logo-csi.jpg
+#+ICON: images/logo-csi.jpg
+
+* Objetivos
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Objetivos
+- Fundamentos del analisis vibracional.
+- Como obtener buenas mediciones.
+- Inicio del analisis Vibracional.
+
+* Fundamentos de Vibración
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Vibración
+Cuando mides la *vibración en los apoyos* (cojinetes, rodamientos) de una máquina, estas midiendo la respuesta de la carcasa del apoyo a las *fuerzas generadas en el interior* de la máquina.
+
+Aquellas fuerzas está vinculadas con *todos los elementos rotativos* de la maquina y de los *alrededores*.
+
+Por tanto, es razonable pensar, que si *mides la vibración* y la analizas *correctamente*, puedes determinar si existe algun *problema en la maquina*
+
+** 
+Existen patrones que deben ser reconocidos.
+
+A medida que la maquina se degrada, el nivel de vibración y los patrones cambiarán. El nivel generalmente aumentará, y el patrón puede cambiar en multiples formas.
+** Ejemplo
+Imagina una moneda pegada a una de las palas de un ventilador (idealmente podemos considerar que el eje de rotación del ventilador coincide con el centro de masa).
+
+Existe un desplazamiento ciclico que depende de la velocidad de rotación y del peso de esta moneda.[fn:1]
+
+
+La onda sinusoidal (con su frecuencia, periodo y amplitud) es una representación de como la vibración se manifiesta con el tiempo.
+
+** Amplitud
+La amplitud nos indica la severidad de la vibración. Esta amplitud puede medirse de diversas formas.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+[[file:images/amplitud_tipos.jpg]]
+#+END_CENTER
+** Terminos
+Amplitud pico a pico: fondo del valle a valor maximo que alcanza el pico.
+
+Amplitud pico: cero a valor maxico del pico.
+
+Amplitud promedio: valor promedio de la onda rectificada (valor absoluto)
+
+Amplitud RMS: Valor eficaz.
+**  
+Solo para ondas sinusoidales:
+- pk-pk = 2 * pk
+- Promedio = 0.637* pk
+- RMS = 0.707 * pk
+** Vibración compuesta
+Ahora, si existe un defecto en la pared interna de la carcaza del ventilador, podemos observar que la *frecuencia* con la que este defecto interactua con las palas del ventilador estara definido por el numero de palas y la velocidad del ventilador.[fn:2]
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 600px
+file:images/2_señales.jpg
+#+END_CENTER
+
+** Footnotes
+
+[fn:1] [[http://www.mobiusinstitute.com/site2/analysistools.asp?LinkID=4001&Title=SIMULATOR:%20Fan%20vibration&URL=http://www.mobiusinstitute.com/assets/0/1208/fbe75459-aa77-4f3d-8309-c5f481cbdf3e.swf&Html1=%3Cp%3EAdjust%20the%20speed%20and%20amplitude%20of%20vibration%20in%20this%20animated%20fan%20and%20see%20how%20these%20two%20varibales%20effect%20the%20time%20waveform.%20As%20you%20increase%20the%20speed,%20the%20wavelength%20of%20the%20sine%20wave%20decreases.%20As%20you%20increase%20the%20amplitude,%20the%20height%20of%20the%20sine%20wave%20increases.%20This%20simulator%20will%20help%20you%20to%20understand%20the%20relationship%20between%20the%20movement%20of%20the%20fan%20and%20the%20vibration%20produced%20by%20its%20movement.%3C/p%3E][Simulación]]
+[fn:2] [[http://www.mobiusinstitute.com/site2/analysistools.asp?LinkID=4001&Title=SIMULATOR:%20Signal%20generator&URL=http://www.mobiusinstitute.com/assets/0/1208/82902e15-57db-4436-9e47-76c502fcff0d.swf&Html1=%3Cp%3EThis%20signal%20generator%20will%20help%20you%20understand%20how%20the%20waveform%20relates%20to%20the%20spectrum.%20%20You%20can%20add%20two%20or%20more%20signals%20together%20and%20see%20the%20resultant%20spectrum.%20You%20can%20also%20play%20with%20amplitude%20and%20frequency%20modulation%20as%20well%20as%20see%20how%20different%20windows%20affect%20the%20signal.%3C/p%3E][Simulación]]
