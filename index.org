@@ -91,6 +91,24 @@ No existe un número "mágico", que puede ser usado de manera definitiva, para d
 
 Estos parámetros se usan para *dirigir tu atención* sobre una máquina que pueda tener un problema. 
 
+** Fase
+La fase es una medida del tiempo entre dos eventos repetitivos de igual frecuencia expresado en grados sexagesimales. 
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 650px
+file:images/fase.jpg
+#+END_CENTER
+** Fase
+Usamos la fase para diagnosticar fallos tales como desequilibrio (el caso del ventilador), desalineación, ejes doblados, y muchos otros problemas. Tambien se pueden detectar resonancias y problemas de flexibilida en la base.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 650px
+file:images/uso_fase.jpg
+#+END_CENTER
+* Fundamento de analisis de Vibración
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
 ** Vibración compuesta
 En nuestro ejemplo, agregamos un defecto en la pared interna de la carcaza del ventilador. Podemos observar que la *frecuencia* con la que este defecto interactua con las palas del ventilador estara definido por el numero de palas y la velocidad del ventilador.[fn:3]
 #+BEGIN_CENTER
@@ -103,8 +121,28 @@ La onda resultante es la suma de vibracion por desbalance y por el defecto en la
 #+ATTR_HTML: :width 800px
 file:images/2_señales.jpg
 #+END_CENTER
+** 
+La onda es muy útil, pero a medida que se van introduciendo un mayor número de señales, se hace más dificil interpretar qúe esta pasando en la máquina.[fn:4]
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+file:images/combinacion_de_señales.jpg
+#+END_CENTER
+** Espectro
+Pero existe otra manera de estudiar la vibración, y consiste en estudiar el especto. El especto se deriva de la onda por medio de un proceso denaminado "Transformada Rápida de Fourier", o FFT
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 280px
+file:images/fft.jpg
+#+END_CENTER
+** Espectro
+El proceso para crear un espectro, mediante FFT, es romper la onda temporal en sus partes constituyentes (ondas sinusoidales de diferente frecuencia y amplitud).[fn:5]
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 500px;
+file:images/amplitud_tiempo_frecuencia.jpg
+#+END_CENTER
+
 ** Footnotes
 
 [fn:1] [[http://www.mobiusinstitute.com/site2/analysistools.asp?LinkID=4001&Title=SIMULATOR:%20Fan%20vibration&URL=http://www.mobiusinstitute.com/assets/0/1208/fbe75459-aa77-4f3d-8309-c5f481cbdf3e.swf&Html1=%3Cp%3EAdjust%20the%20speed%20and%20amplitude%20of%20vibration%20in%20this%20animated%20fan%20and%20see%20how%20these%20two%20varibales%20effect%20the%20time%20waveform.%20As%20you%20increase%20the%20speed,%20the%20wavelength%20of%20the%20sine%20wave%20decreases.%20As%20you%20increase%20the%20amplitude,%20the%20height%20of%20the%20sine%20wave%20increases.%20This%20simulator%20will%20help%20you%20to%20understand%20the%20relationship%20between%20the%20movement%20of%20the%20fan%20and%20the%20vibration%20produced%20by%20its%20movement.%3C/p%3E][Simulación]]
 [fn:2] [[http://www.mobiusinstitute.com/site2/analysistools.asp?LinkID=4001&Title=SEVERITY%20CHART:%20ISO%2010816%20Velocity&URL=http://www.mobiusinstitute.com/assets/0/919/93e15d04-f6a0-44a2-b899-787c3e3fcb5f.swf&Html1=%3Cp%3EISO%2010816%20Velocity%20-%20interactive%20vibration%20severity%20chart.%20%20This%20interactive%20ISO%20vibration%20severity%20chart%20provides%20vibration%20limits%20in%20units%20of%20velocity%20for%20typical%20machines.%20%20Press%20the%20%22unit%22%20button%20at%20the%20bottom%20right%20of%20the%20graph%20to%20toggle%20betwee%20metric%20and%20imperial%20units.%3C/p%3E][Tabla Interactiva]]
 [fn:3] [[http://www.mobiusinstitute.com/site2/analysistools.asp?LinkID=4001&Title=SIMULATOR:%20Signal%20generator&URL=http://www.mobiusinstitute.com/assets/0/1208/82902e15-57db-4436-9e47-76c502fcff0d.swf&Html1=%3Cp%3EThis%20signal%20generator%20will%20help%20you%20understand%20how%20the%20waveform%20relates%20to%20the%20spectrum.%20%20You%20can%20add%20two%20or%20more%20signals%20together%20and%20see%20the%20resultant%20spectrum.%20You%20can%20also%20play%20with%20amplitude%20and%20frequency%20modulation%20as%20well%20as%20see%20how%20different%20windows%20affect%20the%20signal.%3C/p%3E][Simulación]]
+[fn:4] [[http://www.mobiusinstitute.com/site2/analysistools.asp?LinkID=4001&Title=SIMULATOR:%20Signal%20generator&URL=http://www.mobiusinstitute.com/assets/0/1208/82902e15-57db-4436-9e47-76c502fcff0d.swf&Html1=%3Cp%3EThis%20signal%20generator%20will%20help%20you%20understand%20how%20the%20waveform%20relates%20to%20the%20spectrum.%20%20You%20can%20add%20two%20or%20more%20signals%20together%20and%20see%20the%20resultant%20spectrum.%20You%20can%20also%20play%20with%20amplitude%20and%20frequency%20modulation%20as%20well%20as%20see%20how%20different%20windows%20affect%20the%20signal.%3C/p%3E][Simulación]]
