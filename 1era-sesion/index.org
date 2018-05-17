@@ -1,6 +1,6 @@
 #+TITLE: Capacitación Interna - Analisís Vibracional
 #+SUBTITLE: 1era Sesión 
-#+DATE: 2018/05/15（Martes）11:00am
+#+DATE: 2018/05/21（Lunes）9:00am
 #+AUTHOR: Albert Castellano Moreno
 #+EMAIL: acastemoreno@gmail.com
 #+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
@@ -25,17 +25,17 @@
 
 ** Objetivos
 - Fundamentos del analisis vibracional.
-- Como obtener buenas mediciones.
+- Medición de vibración, sensores.
 - Analisis Vibracional como proceso.
 - Diagnostico de fallas.
 
-* Fundamentos de Vibración
+* Vibración
   :PROPERTIES:
   :SLIDE:    segue dark quote
   :ASIDE:    right bottom
   :ARTICLE:  flexbox vleft auto-fadein
   :END:
-
+¿Qué es Vibración? ¿Qué caracteristicas tiene la vibración?  
 ** Vibración
 Cuando mides la *vibración en los apoyos* (cojinetes, rodamientos) de una máquina, estas midiendo la respuesta de la carcasa del apoyo a las *fuerzas generadas en el interior* de la máquina.
 
@@ -104,12 +104,13 @@ Usamos la fase para diagnosticar fallos tales como desequilibrio (el caso del ve
 #+ATTR_HTML: :width 650px
 file:images/uso_fase.jpg
 #+END_CENTER
-* Fundamento de analisis de Vibración
+* Analisis Vibracional
   :PROPERTIES:
   :SLIDE:    segue dark quote
   :ASIDE:    right bottom
   :ARTICLE:  flexbox vleft auto-fadein
   :END:
+¿Existe forma para diagnosticar fallas en una maquina mediante la vibración?
 ** Vibración compuesta
 En nuestro ejemplo, agregamos un defecto en la pared interna de la carcaza del ventilador. Podemos observar que la *frecuencia* con la que este defecto interactua con las palas del ventilador estara definido por el numero de palas y la velocidad del ventilador.[fn:3]
 #+BEGIN_CENTER
@@ -164,7 +165,7 @@ A medida que la maquina va incorporando más componentes, el espectro de vibraci
 #+ATTR_HTML: :width 500px
 file:images/frecuencias_de_fallo2.jpg
 #+END_CENTER
-* Thank You ˊ・ω・ˋ
+* Gracias ˊ・ω・ˋ
 :PROPERTIES:
 :SLIDE: thank-you-slide segue
 :ASIDE: right

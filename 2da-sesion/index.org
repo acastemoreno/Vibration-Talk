@@ -1,0 +1,57 @@
+#+TITLE: Capacitación Interna - Analisís Vibracional
+#+SUBTITLE: 2da Sesión 
+#+DATE: 2018/05/24（Jueves）9:00am
+#+AUTHOR: Albert Castellano Moreno
+#+EMAIL: acastemoreno@gmail.com
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:nil p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:nil todo:t |:t
+#+CREATOR: Emacs 25.2.1
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: es
+#+SELECT_TAGS: export
+
+#+FAVICON: images/logo-csi.jpg
+#+ICON: images/logo-csi.jpg
+
+* Medición de Vibración
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** GIGO
+Sin buenos datos, no se pueden esperar buenos resultados.[fn:1]
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 500px
+file:images/gigo.jpg
+#+END_CENTER
+** Buenos resultados
+Los pasos para obtener buenos resultados son:
+- Asegurarse que estamos usando el sensor adecuado, montado correctamente.
+- Asegurarse que siempre se realizan las medidas de la misma forma. =Repetitividad=
+** Requerimientos del Sensor
+El primer paso para seleccionar el sensor es elegir *que necesitamos medir* (Desplazamiento, Velocidad, Aceleración). Para este paso se tienen en consideración el *tipo de apoyo* y la *velocidad de la máquina*.
+
+Lo siguiente que tenemos que definir es el *modelo adecuado con el entorno de medida*. Consideraremos la temperatura de medida, el espacio de instalación, presencia de agua u otros liquidos, etc.
+
+Finalmente se elige la *técnica y ubicacion de montaje*. Esta elección estara determinada por el tipo de máquina, naturaleza de la superficie de máquina y otros factores del entorno, el *rango de frecuencia requerido*, y demas consideraciones de accesibilidad.
+
+** Repetitividad
+Cada vez que se mide una máquina se debe hacer de la misma manera. Ademas la máquina debe operar en las mismas condiciones en cada medición (*Carga y Velocidad*)
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 450px
+file:images/foto_medicion.jpg
+#+END_CENTER
+* Thank You ˊ・ω・ˋ
+:PROPERTIES:
+:SLIDE: thank-you-slide segue
+:ASIDE: right
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+* Footnotes
+
+[fn:1] Garbage In, Garbage Out
