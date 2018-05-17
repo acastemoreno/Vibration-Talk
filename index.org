@@ -26,7 +26,8 @@
 ** Objetivos
 - Fundamentos del analisis vibracional.
 - Como obtener buenas mediciones.
-- Inicio del analisis Vibracional.
+- Analisis Vibracional como proceso.
+- Diagnostico de fallas.
 
 * Fundamentos de Vibración
   :PROPERTIES:
@@ -136,8 +137,32 @@ file:images/fft.jpg
 ** Espectro
 El proceso separa la onda temporal en sus partes constituyentes (ondas sinusoidales de diferente frecuencia y amplitud) para luego ser visualizados como picos a diferentes frecuencias.
 #+BEGIN_CENTER
-#+ATTR_HTML: :width 500px;
+#+ATTR_HTML: :width 500px
 file:images/amplitud_tiempo_frecuencia.jpg
+#+END_CENTER
+** Nueva unidad de frecuencia
+La frecuencia puede ser expresado en terminos absolutos (Hz o CPM), pero generalmente es más util expresar la frecuencia en unidades relativas.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 650px
+file:images/ordenes.jpg
+#+END_CENTER
+** Ordenes
+Se expresan las diversas frecuencias como multiplos de la velocidad de máquina. Asi ciertas frecuencias siempre se daran a un multiplo especifico. 
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 600px
+file:images/ordenes2.jpg
+#+END_CENTER
+** Frecuencias de fallo
+Cada componente de la maquina emitira vibración a una frecuencia esperada. A estas frecuencias se les conoce como frecuencias de fallo.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 500px
+file:images/frecuencias_de_fallo.jpg
+#+END_CENTER
+** Frecuencias de fallo
+A medida que la maquina va incorporando más componentes, el espectro de vibración se hace más complejo. Esto debido al aumento del numero de frecuencias de fallo.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 500px
+file:images/frecuencias_de_fallo2.jpg
 #+END_CENTER
 * Thank You ˊ・ω・ˋ
 :PROPERTIES:
