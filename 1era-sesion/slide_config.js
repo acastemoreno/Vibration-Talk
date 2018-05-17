@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
    // Slide Settings
    settings: {
-     title: 'Resumen Análisis Vibracional', 
-     subtitle: 'Categoría I', 
+     title: 'Capacitación Interna - Analisís Vibracional', 
+     subtitle: '1era Sesión', 
      useBuilds: true, // Default: true. False will turn off slide animation builds. 
      usePrettify: true, // Default: true 
      enableSlideAreas: true, // Default: true. False turns off the click areas on either slide of the slides.

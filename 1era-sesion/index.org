@@ -1,5 +1,5 @@
-#+TITLE: Resumen Análisis Vibracional
-#+SUBTITLE: Categoría I 
+#+TITLE: Capacitación Interna - Analisís Vibracional
+#+SUBTITLE: 1era Sesión 
 #+DATE: 2018/05/15（Martes）11:00am
 #+AUTHOR: Albert Castellano Moreno
 #+EMAIL: acastemoreno@gmail.com
