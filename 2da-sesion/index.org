@@ -13,8 +13,8 @@
 #+LANGUAGE: es
 #+SELECT_TAGS: export
 
-#+FAVICON: images/logo-csi.jpg
-#+ICON: images/logo-csi.jpg
+#+FAVICON: images/logo-csi.png
+#+ICON: images/logo-csi.png
 
 * Medición de Vibración
   :PROPERTIES:
@@ -34,7 +34,7 @@ Los pasos para obtener buenos resultados son:
 - Asegurarse que estamos usando el sensor adecuado, montado correctamente.
 - Asegurarse que siempre se realizan las medidas de la misma forma. =Repetitividad=
 ** Requerimientos del Sensor
-El primer paso para seleccionar el sensor es elegir *que necesitamos medir* (Desplazamiento, Velocidad, Aceleración). Para este paso se tienen en consideración el *tipo de apoyo* y la *velocidad de la máquina*.
+El primer paso para seleccionar el sensor es elegir *que necesitamos medir* (Desplazamiento, Velocidad, Aceleración). Para este paso se tienen en consideración la *velocidad de la máquina*.
 
 Lo siguiente que tenemos que definir es el *modelo adecuado con el entorno de medida*. Consideraremos la temperatura de medida, el espacio de instalación, presencia de agua u otros liquidos, etc.
 
@@ -46,6 +46,34 @@ Cada vez que se mide una máquina se debe hacer de la misma manera. Ademas la m�
 #+ATTR_HTML: :width 450px
 file:images/foto_medicion.jpg
 #+END_CENTER
+** Vida util y desgaste del sensor
+Una vez se lleva algún tiempo recogiendo datos, y sabes que el metodo de medición es repetible, se espera que los sensores se descalibren y que fallen. EL sensor mostrara signos de desgaste y falla en la señal medida. Más adelante veremos como reconocer estos fallos.
+
+Se recomienda calibrar o reemplazar los sensores anualmente.
+* Aceleración, velocidad o desplazamiento?
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** 
+  :PROPERTIES:
+  :FILL:     images/vibration_severity.jpg
+  :TITLE:    white
+  :SLIDE:    white background-center
+  :END:
+
+* Tipos de transductores
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+
+
+
 * Thank You ˊ・ω・ˋ
 :PROPERTIES:
 :SLIDE: thank-you-slide segue

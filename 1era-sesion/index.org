@@ -13,8 +13,8 @@
 #+LANGUAGE: es
 #+SELECT_TAGS: export
 
-#+FAVICON: images/logo-csi.jpg
-#+ICON: images/logo-csi.jpg
+#+FAVICON: images/logo-csi.png
+#+ICON: images/logo-csi.png
 
 * Objetivos
   :PROPERTIES:
