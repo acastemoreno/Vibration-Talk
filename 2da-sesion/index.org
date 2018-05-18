@@ -70,9 +70,27 @@ Se recomienda calibrar o reemplazar los sensores anualmente.
   :ASIDE:    right bottom
   :ARTICLE:  flexbox vleft auto-fadein
   :END:
+** Sensores de desplazamiento
+Son usados típicamente en *monitorizado en continuo*. El sensor no va en el exterior de la máquina. Esta montado en un apoyo con *vision directa al eje* (requiere un agujero pasante). Son llamados sondas de proximidad o sondas Eddy Current (corriente de foucault)
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 330px
+file:images/sonda_de_proximidad.jpg
+#+END_CENTER
+** Sensores de desplazamiento
+En la mayoria de casos se instalan pares formando un angulo de 90°. Esto permite generar un =diagrama de órbitas= (movimiento del eje en el apoyo). 
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 370px
+file:images/orbit_example.png
+#+END_CENTER
+** Sensores de desplazamiento
+Ventajas:
+- Respuesta de baja frecuencia (hasta 5 Hz).
+- Mide el desplazamiento relativo entre el eje y el apoyo.
+- Son fiables, si han sido bien montados.
 
-
-
+Desventajas:
+- Son caros y dificiles de instalar.
+- No se pueden usar para medidas de alta frecuencia.
 
 * Thank You ˊ・ω・ˋ
 :PROPERTIES:
