@@ -83,14 +83,55 @@ En la mayoria de casos se instalan pares formando un angulo de 90°. Esto permit
 file:images/orbit_example.png
 #+END_CENTER
 ** Sensores de desplazamiento
-Ventajas:
+_Ventajas_:
 - Respuesta de baja frecuencia (hasta 5 Hz).
 - Mide el desplazamiento relativo entre el eje y el apoyo.
 - Son fiables, si han sido bien montados.
 
-Desventajas:
+_Desventajas_:
 - Son caros y dificiles de instalar.
 - No se pueden usar para medidas de alta frecuencia.
+- Su calibración (se determina con el cociente entre el voltaje de salida y el desplazamiento real) depende del material del eje.
+- El desgaste del eje y los defectos en su superficie producen señales falsas.
+** Sensores de Velocidad
+Aun cuando *es frecuente usar amplitudes en unidades de velocidad*, los *sensores de velocidad no se usan* frecuentemente.
+El sensor de velocidad es básicamente un imán suspendido, montado entre un muelle y un amortiguador.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 370px
+file:images/sensor_de_velocidad.jpg
+#+END_CENTER
+** Sensores de Velocidad
+_Ventajas_:
+- No necesita energía del exterior, el propio sistema genera electricidad.
+- La señal de salida es potente.
+
+_Desventajas_:
+- No es adecuado para medidas de baja y alta frecuencia.
+- Hay cambios en la sensibilidad con la temperatura.
+- Debido a las partes internas móviles. el desgaste puede acortar su tiempo de vida.
+- Los sensores son bastante grandes.
+** Acelerómetros   
+Los acelerómetros son los *sensores más utilizados* en análisis vibracional. El más comun es el piezoeléctrico con un amplificador interno. Un material piezoelectrico (cristal) se *comprime y descomprime* dentro del sensor produciendo un *carga* la cual es *amplificada* mediante una *corriente constante*.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 220px
+file:images/sensor_de_aceleracion.jpg
+#+END_CENTER
+** Acelerómetros
+Cuando un acelerómetro se conecta a la fuente de vibración, el amplificador necesita unos pocos segundos para estabilizarse.
+
+Si la espera es demasiado corta, en el espectro se mostrará una rampa descendente conocida como "ski-slope".
+#+BEGIN_CENTER
+#+ATTR_HTML: :widt5 500px
+file:images/ski-slope.jpg
+#+END_CENTER
+** Aceletrometros
+_Ventajas_:
+- Amplio rango de frecuencias.
+- Pueden ser usados para analizar rodamientos (alta frecuencia).
+- Pueden medir velocidad mediante un proceso llamado integración (igualmente con el desplazamiento mediante doble integración)
+
+_Desventajas_:
+- Limitaciones en la temperatura debido al amplificador interno.
 
 * Thank You ˊ・ω・ˋ
 :PROPERTIES:
