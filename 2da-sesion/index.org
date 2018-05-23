@@ -110,13 +110,13 @@ _Desventajas_:
 - Hay cambios en la sensibilidad con la temperatura.
 - Debido a las partes internas móviles. el desgaste puede acortar su tiempo de vida.
 - Los sensores son bastante grandes.
-** Acelerómetros   
+** Acelerometros   
 Los acelerómetros son los *sensores más utilizados* en análisis vibracional. El más comun es el piezoeléctrico con un amplificador interno. Un material piezoelectrico (cristal) se *comprime y descomprime* dentro del sensor produciendo un *carga* la cual es *amplificada* mediante una *corriente constante*.
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 220px
 file:images/sensor_de_aceleracion.jpg
 #+END_CENTER
-** Acelerómetros
+** Acelerometros
 Cuando un acelerómetro se conecta a la fuente de vibración, el amplificador necesita unos pocos segundos para estabilizarse.
 
 Si la espera es demasiado corta, en el espectro se mostrará una rampa descendente conocida como "ski-slope".
@@ -124,14 +124,66 @@ Si la espera es demasiado corta, en el espectro se mostrará una rampa descenden
 #+ATTR_HTML: :widt5 500px
 file:images/ski-slope.jpg
 #+END_CENTER
-** Aceletrometros
+** Acelerometros Triaxiales
+Un acelerometros triaxiales consisten en 3 acelerometros montados ortogonalmente entre ellos, montados en un unico bloque.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 400px
+file:images/triaxial.jpg
+#+END_CENTER
+** Sensibilidad de acelerometro
+Mediante un proceso llamado *integracion* se puede medir *desplazamiento y velocidad* desde un acelerometro. *Pero no todo acelerometro funciona para esta labor*.
+
+Para elegir el *acelerometro adecuado* se debe tener en cuenta la *sensibilidad del acelerometro*. La *sensibilidad* es una medida de los *niveles de tension* que obtienes en en respuesta *a un nivel fijo de vibracion*.
+
+La sensibilidad se expresa en =mV/g=
+** 
+Alta sensibilidad (500 mV/g a 1V/g):
+- Maquina de precision.
+- Baja velocidad.
+- Bajo nivel de vibracion.
+
+Baja sensibilidad (menor a 50 mV/g):
+- Maquinas grandes.
+- Altas velocidades.
+- Alto nivel de vibracion.
+
+Mediana sensibilidad (~100mV/g)
+- De proposito general.
+
+
+** 
+  :PROPERTIES:
+  :FILL:     images/sensibilidades.jpg
+  :TITLE:    white
+  :SLIDE:    white background-center
+  :END:
+
+** Acelerometros
 _Ventajas_:
 - Amplio rango de frecuencias.
 - Pueden ser usados para analizar rodamientos (alta frecuencia).
 - Pueden medir velocidad mediante un proceso llamado integración (igualmente con el desplazamiento mediante doble integración)
-
+  
 _Desventajas_:
 - Limitaciones en la temperatura debido al amplificador interno.
+
+* Entorno de medida
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Entorno de medicion
+Si bien los sensores son diseñados para ser robustos, tienen un limite a la temperatura debido a su amplificador interno.
+
+Por encima de 150°C (300°F), se recomienda usar transductores en modo de carga.
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 350px
+file:images/ambiente_con_alta_temperatura.jpg
+#+END_CENTER
+
 
 * Thank You ˊ・ω・ˋ
 :PROPERTIES:
