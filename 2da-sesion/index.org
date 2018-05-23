@@ -150,7 +150,6 @@ Baja sensibilidad (menor a 50 mV/g):
 Mediana sensibilidad (~100mV/g)
 - De proposito general.
 
-
 ** 
   :PROPERTIES:
   :FILL:     images/sensibilidades.jpg
@@ -166,6 +165,12 @@ _Ventajas_:
   
 _Desventajas_:
 - Limitaciones en la temperatura debido al amplificador interno.
+** 
+  :PROPERTIES:
+  :FILL:     images/requerimientos_sensores.jpg
+  :TITLE:    white
+  :SLIDE:    white background-center
+  :END:
 
 * Entorno de medida
   :PROPERTIES:
@@ -184,6 +189,59 @@ Por encima de 150°C (300°F), se recomienda usar transductores en modo de carga
 file:images/ambiente_con_alta_temperatura.jpg
 #+END_CENTER
 
+* Montaje del sensor
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** 
+  :PROPERTIES:
+  :FILL:     images/tipos_de_montaje.jpg
+  :TITLE:    white
+  :SLIDE:    white background-center
+  :END:
+** Cuantos sensores instalar
+Se recomientas instalar:
+- 2 sensores radiales en cada apoyo (puede ser  vertical y horizontal)
+- 1 sensor axial por eje
+
+** Donde NO instalar el transductor
+- En lugares donde exista poca superficie de contacto.
+- En la cubierta de los ventiladores.
+- Entre las aletas de enfriamiento del estator, a menos que exista suficiente espacio para albergar el sensor y suficiente superficie de contacto.
+- En lugares donde exista una mala preparacion de superficie.
+
+** Preparacion de superficie
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 900px
+file:images/spot_face.jpg
+#+END_CENTER
+#+BEGIN_CENTER
+Spot face tool
+#+END_CENTER
+
+** 
+  :PROPERTIES:
+  :FILL:     images/mal_montaje1.jpg
+  :TITLE:    white
+  :SLIDE:    white background-center
+  :END:
+
+** 
+  :PROPERTIES:
+  :FILL:     images/mal_montaje2.jpg
+  :TITLE:    white
+  :SLIDE:    white background-center
+  :END:
+
+** 
+  :PROPERTIES:
+  :FILL:     images/buen_montaje.jpg
+  :TITLE:    white
+  :SLIDE:    white background-center
+  :END:
 
 * Thank You ˊ・ω・ˋ
 :PROPERTIES:
