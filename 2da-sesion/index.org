@@ -283,6 +283,7 @@ El sensor presentara un =ski-slope= en los siguientes casos:
 #+BEGIN_CENTER
 #+ATTR_HTML: :width 700px
 file:images/ski-slope.jpg
+#+END_CENTER
 ** Superficies sucias
 La suciedad en la superficie atenúa altas frecuencias. 
 
@@ -292,7 +293,6 @@ Las monturas flojas pueden hacer que el sensor *traquetee*.
 
 Esto genera *armonicos inesperados*
 
-#+END_CENTER
 * Thank You ˊ・ω・ˋ
 :PROPERTIES:
 :SLIDE: thank-you-slide segue

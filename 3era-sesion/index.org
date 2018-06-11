@@ -1,0 +1,99 @@
+#+TITLE: Capacitación Interna - Analisís Vibracional
+#+SUBTITLE: 3era Sesión 
+#+DATE: 2018/06/11（Lunes）9:00am
+#+AUTHOR: Albert Castellano Moreno
+#+EMAIL: acastemoreno@gmail.com
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:nil p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:nil todo:t |:t
+#+CREATOR: Emacs 25.2.1
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: es
+#+SELECT_TAGS: export
+
+#+FAVICON: images/logo-csi.png
+#+ICON: images/logo-csi.png
+
+* Analisis Vibracional como proceso
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Analisis Vibracional como proceso
+En esta sesión nos centraremos en como revisar los datos de vibración con el fin de determinar si existe un problema.
+
+El analisis de cada una de las mediciones y su posterior comparación puede llegar a ser abrumadora. Haria falta mucho tiempo, nivel de concentración y perseverancia.
+
+Necesitamos describir un metodo que permita evitar la perdida de pistas de cruciales en la detección de problemas. (Existen muchos casos donde se recopilan datos pero no se llega a detectar fallas en su debido momento ocasionando grandes perdidas)
+
+** La piramide
+La forma de la piramide representa el número de máquinas involucradas en cada fase (no representa el tiempo, esfuerzo, importancia o habilidades requeridas)
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 505px
+file:images/piramide.jpg
+#+END_CENTER
+** La piramide
+El objetivo debe ser dejar atras la base de la piramide tan rápido como te sea posible, para pasar mas tiempo en la cima:
+- Diagnosticando fallos
+- Determinando caminos para evitar futuras fallas
+- Verificando reparaciones.
+* Fase de Detección
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Informe de Excepción
+La mayoria de los sofwares de vibración generan reportes de excepción.
+
+El sofware escanea todas las medidas de vibración, las *compara con limites de alarma*, opcionalmente contra lecturas previas, y entonces *genera una lista* de máquinas con los resultados.
+
+Los resultados del informe indicarán que máquinas fallas, asi como su severidad y nivel de excedencia (% o dB).
+** Límites de Alarma
+Al tener una nueva lectura, uno de los mayores retos es saber cuales deberian ser los niveles de alarmas
+
+¿En que punto se recomienda reparación? ¿En qué punto debo preocuparme y hacer un mayor seguimiento a una maquina?
+
+Los niveles de referencia son dictados por muchos factores. El tamaño de máquina, la criticidad, la carga a la que esta sometida y el historial son muy importantes.
+** Límites de Alarma
+Hay dos maneras de fijar un nivel de alarma.
+- Recurrir a límites publicados y fijados.
+- A partir de las lecturas de vibración existentes, realizar un cálculo para llegar al valor del límite.
+** Limites publicados y fijados
+Durante muchos años se ha intentado tabular todo tipo de máquinas y los correspondientes niveles de vibración.
+
+Estos intentos han sido llevados a cabo por distribuidores de sofware, compañias y organizaciones similares.
+
+El resultado son las siguientes tablas:
+** [[http://www.mobiusinstitute.com/site2/analysistools.asp?LinkID=4001&Title=SEVERITY%20CHART:%20ISO%2010816%20Velocity&URL=http://www.mobiusinstitute.com/assets/0/919/93e15d04-f6a0-44a2-b899-787c3e3fcb5f.swf&Html1=%3Cp%3EISO%2010816%20Velocity%20-%20interactive%20vibration%20severity%20chart.%20%20This%20interactive%20ISO%20vibration%20severity%20chart%20provides%20vibration%20limits%20in%20units%20of%20velocity%20for%20typical%20machines.%20%20Press%20the%20%22unit%22%20button%20at%20the%20bottom%20right%20of%20the%20graph%20to%20toggle%20betwee%20metric%20and%20imperial%20units.%3C/p%3E][ISO 10816]] (RMS de 10 z a 1000Hz)
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 350px
+file:images/iso_10816.png
+#+END_CENTER
+** DLI [[http://azimadli.com/wp-content/uploads/AzimaDLI-Severity-Chart-2013.pdf][v2013]] [[http://www.azimadli.com/images/severitychart.jpg][v1998]]
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 600px
+file:images/dli.jpg
+#+END_CENTER
+** Límites de Alarma
+Los limites anteriores son para nivels de vibracion globales (10 a 1000Hz)
+
+Pero existe un problema.
+
+El pico a la velocidad de máquina generalmente sera el más alto del espectro, pero no siempre.
+
+Hay otra gran cantidad de picos que necesitan ser chequeados con el fin de chequear si existe un problema potencial con la maquina.
+* Thank You ˊ・ω・ˋ
+:PROPERTIES:
+:SLIDE: thank-you-slide segue
+:ASIDE: right
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+* Footnotes
+
+ 
