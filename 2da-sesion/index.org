@@ -16,6 +16,14 @@
 #+FAVICON: images/logo-csi.png
 #+ICON: images/logo-csi.png
 
+
+** Disclaimer
+La norma [[https://www.iso.org/standard/50447.html][ISO 18436.2]] establece responsabilidades de calificación de personal relacionado a analisis vibracional. 
+- Personal con certificación [[http://marketing.mobiusinstitute.com/media/pdf/brochures/CAT%20I%20Lead.pdf][categoria 1]]: entiende como obtener buenas mediciones.
+- Personal con certificación [[http://marketing.mobiusinstitute.com/media/pdf/brochures/CAT%20II%20Lead.pdf][categoria 2]]: ubica e instala sensores, competente en el diagnostico de fallas comunes en maquinaria.
+- Personal con certificación [[http://marketing.mobiusinstitute.com/media/pdf/brochures/CAT%20III%20Lead.pdf][categoria 3]]: comprende completamente la vibración y el analisis de fase, equilibrio dinamico, alineación y tecnologias de monitoreo de condición
+- Personal con certificación [[http://marketing.mobiusinstitute.com/media/pdf/brochures/CAT%20IV%20Lead.pdf][categoria 4]]: capacitado para liderar equipos de monitoreo de condición.
+
 * Medición de Vibración
   :PROPERTIES:
   :SLIDE:    segue dark quote
@@ -189,6 +197,27 @@ Por encima de 150°C (300°F), se recomienda usar transductores en modo de carga
 file:images/ambiente_con_alta_temperatura.jpg
 #+END_CENTER
 
+* Puntos de medición
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Puntos de medición
+Las mejores partes para medir la vibración son los rodamientos o cojinetes.
+
+Al igual que el sonido, la vibración es direccional y se atenúa a medida que la distancia hasta la fuente se incrementa.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 250px
+file:images/donde_instalar.jpg
+#+END_CENTER
+
+** Cuantos sensores instalar
+Se recomientas instalar:
+- 2 sensores radiales en cada apoyo (puede ser  vertical y horizontal)
+- 1 sensor axial por eje
+
 * Montaje del sensor
   :PROPERTIES:
   :SLIDE:    segue dark quote
@@ -202,11 +231,6 @@ file:images/ambiente_con_alta_temperatura.jpg
   :TITLE:    white
   :SLIDE:    white background-center
   :END:
-** Cuantos sensores instalar
-Se recomientas instalar:
-- 2 sensores radiales en cada apoyo (puede ser  vertical y horizontal)
-- 1 sensor axial por eje
-
 ** Donde NO instalar el transductor
 - En lugares donde exista poca superficie de contacto.
 - En la cubierta de los ventiladores.
@@ -243,6 +267,32 @@ Spot face tool
   :SLIDE:    white background-center
   :END:
 
+
+* Reconocer malos datos
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+
+** Ski-slope
+El sensor presentara un =ski-slope= en los siguientes casos:
+- Bajo tiempo de estabilización desde alimentación.
+- Bajo tiempo de estabilización desde cambio de temperatura o golpe leve.
+- Vibración de alta amplitud (sensor sobrecargado)
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+file:images/ski-slope.jpg
+** Superficies sucias
+La suciedad en la superficie atenúa altas frecuencias. 
+
+Si se observa la *falta* de contenido a altas frecuencias (comparado a lecturas anteriores), esto es un buen indicador de la falta de limpieza de la superficie.
+** Insuficiente contacto con superficie
+Las monturas flojas pueden hacer que el sensor *traquetee*. 
+
+Esto genera *armonicos inesperados*
+
+#+END_CENTER
 * Thank You ˊ・ω・ˋ
 :PROPERTIES:
 :SLIDE: thank-you-slide segue
