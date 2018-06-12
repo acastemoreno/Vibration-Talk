@@ -16,7 +16,6 @@
 #+FAVICON: images/logo-csi.png
 #+ICON: images/logo-csi.png
 
-
 ** Disclaimer
 La norma [[https://www.iso.org/standard/50447.html][ISO 18436.2]] establece responsabilidades de calificación de personal relacionado a analisis vibracional. 
 - Personal con certificación [[http://marketing.mobiusinstitute.com/media/pdf/brochures/CAT%20I%20Lead.pdf][categoria 1]]: entiende como obtener buenas mediciones.

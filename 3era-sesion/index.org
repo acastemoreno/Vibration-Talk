@@ -80,14 +80,58 @@ file:images/iso_10816.png
 #+ATTR_HTML: :width 600px
 file:images/dli.jpg
 #+END_CENTER
-** Límites de Alarma
-Los limites anteriores son para nivels de vibracion globales (10 a 1000Hz)
+** Limites publicados y fijados
+Teniendo en cuenta que todas las máquinas son diferentes (operan bajo diferentes cargas, estan montadas de diferente manera, diferente fabricación, etc), incluso en aquellas que son similares, aplicar limites publicados y fijados puede llevarnos a desechar maquinas en buen estado o a sobrexigirlas cuando su estado no es el adecuado.
 
-Pero existe un problema.
+Se recomienda comenzar con limites publicados, y después de que hayan sido tomadas varias lecturas, pasar a limites calculados. Para esto tiene que pasar bastante tiempo para tener una buena idea de la condición de la máquina.
+** Limites calculados
+Basándonos en la afirmación, de que una máquina tiene problemas si sus niveles de vibración superan el doble de los =niveles saludables=, podemos trazar una *linea base* y fijar ahi los límites.
 
-El pico a la velocidad de máquina generalmente sera el más alto del espectro, pero no siempre.
+Una =linea base= es una medida ideal que creemos que mejor representa cómo debieria vibrar la máquina. Es una medida que podemos usar para comparar, con el fin de determinar si ha ocurrido algún cambio.
+** Limites calculados
+Existen estrategias para determinar la linea base:
+- Tomar la primera serie de datos recogidos y establecer la linea base al doble de estos valores.
+- Tomar una lectura después de que la máquina haya sido reparada/reacondicionada (y despues de que haya tenido la oportunidad de operar) y fijar la línea base al doble de estos valores
+- Calculos estadísticos (vibracion fuera de su variacion normal 2-sigma o 3-sigma se considera en alerta para observación).
 
-Hay otra gran cantidad de picos que necesitan ser chequeados con el fin de chequear si existe un problema potencial con la maquina.
+** Tecnicas de detección
+Sea cual sea la estrategia para obetenr los limites de alarma, existen diversos metodos o técnicas de detección:
+- Alarmas de banda.
+- Alarmas Envolventes.
+- Sistemas Expertos.
+- Sistemas de Inteligencia Artificial.
+** Alarmas de banda (Alarmas Espectrales)
+Se calcula el valor de vibracion (RMS, promedio, pk o pk-pk) en un rango de frecuencias que contengan picos caracteristicos y se comprueba sí exceden limites.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 400px
+file:images/bandas.png
+#+END_CENTER
+** Alarmas en envolvente (Alarma de máscara)
+El limite de alarma se aplica al espectro completo, en vez de fraccionario en bandas. Potencialmente más sensible a los picos que puedan aparecer a frecuencias inesperadas pero con un informe de excepción no tan espefico.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 450px
+file:images/envolvente.png
+#+END_CENTER
+** Sistemas Expertos
+Un sistema expero es un sofware que es capaz de tomar datos de entrada y proveer información util de sálida. En la mayoria de los casos, el proceso requiere realizar cálculos, y tomar decisiones.
+
+Un sistema experto esta diseñado por un *ingeniero del conocimiento* en base a los conocimientos de un *profesional experto* proporcionando ayuda a personas con poca experiencia para resolver problemas que requieren un "conocimiento formal especializado"
+
+Un sistema experto esta diseñado alrededor de reglas. Por ejemplo =Si la vibración a 1X es alta en vertical y horizontal, y no tan alta en axial y la vibracion a 2X no es alta, tenemos un desequilibrio=
+** Sistemas Expertos
+Los sistemas expertos, cuando se configuran correctamente, son capaces de filtrar información, y en algunos casos proveer diagnóstico y recomendaciones.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 450px
+file:images/sistemas-expertos.jpg
+#+END_CENTER
+** Sistemas de Inteligencia Artificial
+Los obetivos son los mismo que los del sistema experto; revisar datos de vibración y realizar un diagnóstico. SIn embargo los sistemas AI (o redes neuronales) trabajan de diferente manera a los sistemas exertos.
+
+Los *sistemas expertos* estan diseñados sobre unas *reglas*. Los *sistemas AI aprenden* o desarrollan sus propias reglas.
+
+Alimentas con una serie de datos e indicas que significan. Proceso repetitivo.
+
+
 * Thank You ˊ・ω・ˋ
 :PROPERTIES:
 :SLIDE: thank-you-slide segue
