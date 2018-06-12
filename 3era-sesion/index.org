@@ -131,7 +131,10 @@ Los *sistemas expertos* estan diseñados sobre unas *reglas*. Los *sistemas AI a
 
 Alimentas con una serie de datos e indicas que significan. Proceso repetitivo.
 
+** Caso Especial: Velocidad y carga variable
+Cuando la velocidad de la máquina varía (o la carga), los nivel de vibración tambien cambian. Tambien cambia el valor de las frecuencias que no estan relacionadas a la velocidad de maquina) como resonancia, fuentes externas de vibración, problemas electricos, etc.
 
+Si no puedes controlar la velocidad de máquina, configura diferentes máquinas (Bomba-A 1000RPM y Bomba-A 1200RPM), y aplica diferentes límites de alarma para cada una.
 * Thank You ˊ・ω・ˋ
 :PROPERTIES:
 :SLIDE: thank-you-slide segue
