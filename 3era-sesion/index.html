@@ -2,7 +2,7 @@
 <html>
 <head>
 <title></title>
-<!-- 2018-06-12 mar 16:02 -->
+<!-- 2018-06-14 jue 12:05 -->
 <meta  charset="utf-8" />
 <meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
 <meta  name="generator" content="Org-mode with org-ioslide" />
@@ -38,8 +38,201 @@
   
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/logo-csi.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-orgea9c439" class="outline-2">
-<h2 id="orgea9c439">Analisis Vibracional como proceso</h2>
+       <h2 class=" "><div id="outline-container-org3edfc97" class="outline-2">
+<h2 id="org3edfc97">Procesamiento de Señal</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-">
+<p>
+¿Qué pasa con la señal del transductor cuando es recibida por el colector de datos?
+</p>
+
+
+</article>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org3b97e19" class="outline-3">
+<h3 id="org3b97e19"></h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Proceso de la señal<sup>1</sup>
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/proceso_de_señal.png" alt="proceso_de_señal.png" width="800px" />
+</p>
+</div>
+</article>
+
+<footer class="source">
+<p class="footpara">1. 
+<a href="http://www.analog.com/en/analog-dialogue/articles/intro-to-mems-vibration-monitoring.html">An Introduction to MEMS Vibration Monitoring</a>
+</p>
+</footer>
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgd81fe93" class="outline-3">
+<h3 id="orgd81fe93">Filtros</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/filtros.jpg" alt="filtros.jpg" width="600px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org6258ae4" class="outline-3">
+<h3 id="org6258ae4">Frecuencia de muestreo (Sample Rate)</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Se hacen muestras indivuales a intervalos discretos. La frecuencia en la que la onda se muestrea se llama <code>Frecuencia de muestreo</code>. Su unidad es <code>Samples/S</code>
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/discretizacion.png" alt="discretizacion.png" width="700px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org3c6e0fe" class="outline-3">
+<h3 id="org3c6e0fe">Frecuencia de muestreo - FMAX</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Si queremos detectar una frecuencia maxima de interes (<code>FMAX</code>), la <code>frecuencia de muestreo</code> debe ser por lo menos el doble de la <code>FMAX</code>. El modulo <code>Dynamix</code> toma este factor como <code>2.28</code>  
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/demostracion_frec_nyquist.jpg" alt="demostracion_frec_nyquist.jpg" width="400px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org9a3a6b6" class="outline-3">
+<h3 id="org9a3a6b6">Numero de muestras - Líneas de Resolución</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Existe otra relación que vincula la onda y el espectro.
+</p>
+
+<p>
+El <code>número de muestras</code> de la onda de tiempo determina el <b>espesor o la resolución del espectro</b>.
+</p>
+
+<p>
+El <b>espesor o resolución</b> esta determinado por el <b>número de líneas</b>. A este número se le conoce como <code>Líneas de Resolución</code> o <code>LOR</code>.
+</p>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgeb210dc" class="outline-3">
+<h3 id="orgeb210dc">Numero de muestras - Líneas de Resolución</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+2 frecuencias cuya separación entre ellas es menor a la <b>resolución del espectro</b> no podran distinguirse en el espectro.
+</p>
+
+<p>
+El <b>número de muestras</b> es <code>2.28</code> veces el <b>número de líneas</b> para el modulo <code>Dynamix</code>.
+</p>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org0b1be3d" class="outline-3">
+<h3 id="org0b1be3d">Frecuencia de muestreo - Numero de muestras</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<blockquote>
+<p>
+Podemos controlar 2 parámetros: la frecuencia de muestreo y el número total de muestras recolectadas. La frecuencia de muestreo se controla seleccionando el <b>Fmax</b>. El numero de muestras se define por medio de líneas de resolución.
+</p>
+</blockquote>
+<blockquote>
+<p>
+El tiempo que se necesita para recolectar los datos es igual al número de muestras que se requiere, dividido entre la frecuencia de muestreo.
+</p>
+</blockquote>
+
+
+</article>
+
+</slide>
+
+</slide>
+
+</slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/logo-csi.png"></aside><hgroup class="">
+       <h2 class=" "><div id="outline-container-org79e5183" class="outline-2">
+<h2 id="org79e5183">Analisis Vibracional como proceso</h2>
 </div>
 </h2>
        <h3></h3>
@@ -52,8 +245,8 @@
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org6f4844f" class="outline-3">
-<h3 id="org6f4844f">Analisis Vibracional como proceso</h3>
+       <h2 class=" "><div id="outline-container-orgaaaaef1" class="outline-3">
+<h3 id="orgaaaaef1">Analisis Vibracional como proceso</h3>
 </div>
 </h2>
        <h3></h3>
@@ -79,8 +272,8 @@ Necesitamos describir un metodo que permita evitar la perdida de pistas de cruci
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgcead7d2" class="outline-3">
-<h3 id="orgcead7d2">La piramide</h3>
+       <h2 class=" "><div id="outline-container-org13727fb" class="outline-3">
+<h3 id="org13727fb">La piramide</h3>
 </div>
 </h2>
        <h3></h3>
@@ -104,8 +297,8 @@ La forma de la piramide representa el número de máquinas involucradas en cada 
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org3fbdb14" class="outline-3">
-<h3 id="org3fbdb14">La piramide</h3>
+       <h2 class=" "><div id="outline-container-org59dde35" class="outline-3">
+<h3 id="org59dde35">La piramide</h3>
 </div>
 </h2>
        <h3></h3>
@@ -129,8 +322,8 @@ El objetivo debe ser dejar atras la base de la piramide tan rápido como te sea 
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/logo-csi.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-org71d1bda" class="outline-2">
-<h2 id="org71d1bda">Fase de Detección</h2>
+       <h2 class=" "><div id="outline-container-orge4eb13c" class="outline-2">
+<h2 id="orge4eb13c">Fase de Detección</h2>
 </div>
 </h2>
        <h3></h3>
@@ -143,8 +336,8 @@ El objetivo debe ser dejar atras la base de la piramide tan rápido como te sea 
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org645c9a8" class="outline-3">
-<h3 id="org645c9a8">Informe de Excepción</h3>
+       <h2 class=" "><div id="outline-container-orgf2f77bc" class="outline-3">
+<h3 id="orgf2f77bc">Informe de Excepción</h3>
 </div>
 </h2>
        <h3></h3>
@@ -169,8 +362,8 @@ Los resultados del informe indicarán que máquinas fallas, asi como su severida
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org4447151" class="outline-3">
-<h3 id="org4447151">Límites de Alarma</h3>
+       <h2 class=" "><div id="outline-container-orgb2f4861" class="outline-3">
+<h3 id="orgb2f4861">Límites de Alarma</h3>
 </div>
 </h2>
        <h3></h3>
@@ -195,8 +388,8 @@ Los niveles de referencia son dictados por muchos factores. El tamaño de máqui
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org3d2c74e" class="outline-3">
-<h3 id="org3d2c74e">Límites de Alarma</h3>
+       <h2 class=" "><div id="outline-container-org86535c9" class="outline-3">
+<h3 id="org86535c9">Límites de Alarma</h3>
 </div>
 </h2>
        <h3></h3>
@@ -217,8 +410,8 @@ Hay dos maneras de fijar un nivel de alarma.
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgc2d47a6" class="outline-3">
-<h3 id="orgc2d47a6">Limites publicados y fijados</h3>
+       <h2 class=" "><div id="outline-container-org6d247bc" class="outline-3">
+<h3 id="org6d247bc">Limites publicados y fijados</h3>
 </div>
 </h2>
        <h3></h3>
@@ -243,8 +436,8 @@ El resultado son las siguientes tablas:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org5bc4fef" class="outline-3">
-<h3 id="org5bc4fef"><a href="http://www.mobiusinstitute.com/site2/analysistools.asp?LinkID=4001&amp;Title=SEVERITY%20CHART:%20ISO%2010816%20Velocity&amp;URL=http://www.mobiusinstitute.com/assets/0/919/93e15d04-f6a0-44a2-b899-787c3e3fcb5f.swf&amp;Html1=%3Cp%3EISO%2010816%20Velocity%20-%20interactive%20vibration%20severity%20chart.%20%20This%20interactive%20ISO%20vibration%20severity%20chart%20provides%20vibration%20limits%20in%20units%20of%20velocity%20for%20typical%20machines.%20%20Press%20the%20%22unit%22%20button%20at%20the%20bottom%20right%20of%20the%20graph%20to%20toggle%20betwee%20metric%20and%20imperial%20units.%3C/p%3E">ISO 10816</a> (RMS de 10 z a 1000Hz)</h3>
+       <h2 class=" "><div id="outline-container-orgb4389a1" class="outline-3">
+<h3 id="orgb4389a1"><a href="http://www.mobiusinstitute.com/site2/analysistools.asp?LinkID=4001&amp;Title=SEVERITY%20CHART:%20ISO%2010816%20Velocity&amp;URL=http://www.mobiusinstitute.com/assets/0/919/93e15d04-f6a0-44a2-b899-787c3e3fcb5f.swf&amp;Html1=%3Cp%3EISO%2010816%20Velocity%20-%20interactive%20vibration%20severity%20chart.%20%20This%20interactive%20ISO%20vibration%20severity%20chart%20provides%20vibration%20limits%20in%20units%20of%20velocity%20for%20typical%20machines.%20%20Press%20the%20%22unit%22%20button%20at%20the%20bottom%20right%20of%20the%20graph%20to%20toggle%20betwee%20metric%20and%20imperial%20units.%3C/p%3E">ISO 10816</a> (RMS de 10 z a 1000Hz)</h3>
 </div>
 </h2>
        <h3></h3>
@@ -265,8 +458,8 @@ El resultado son las siguientes tablas:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org6f37e57" class="outline-3">
-<h3 id="org6f37e57">DLI <a href="http://azimadli.com/wp-content/uploads/AzimaDLI-Severity-Chart-2013.pdf">v2013</a> <a href="http://www.azimadli.com/images/severitychart.jpg">v1998</a></h3>
+       <h2 class=" "><div id="outline-container-org9e79118" class="outline-3">
+<h3 id="org9e79118">DLI <a href="http://azimadli.com/wp-content/uploads/AzimaDLI-Severity-Chart-2013.pdf">v2013</a> <a href="http://www.azimadli.com/images/severitychart.jpg">v1998</a></h3>
 </div>
 </h2>
        <h3></h3>
@@ -287,8 +480,8 @@ El resultado son las siguientes tablas:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgaf22f1d" class="outline-3">
-<h3 id="orgaf22f1d">Limites publicados y fijados</h3>
+       <h2 class=" "><div id="outline-container-orgcbb1eef" class="outline-3">
+<h3 id="orgcbb1eef">Limites publicados y fijados</h3>
 </div>
 </h2>
        <h3></h3>
@@ -309,8 +502,8 @@ Se recomienda comenzar con limites publicados, y después de que hayan sido toma
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgb05543e" class="outline-3">
-<h3 id="orgb05543e">Limites calculados</h3>
+       <h2 class=" "><div id="outline-container-org29729d7" class="outline-3">
+<h3 id="org29729d7">Limites calculados</h3>
 </div>
 </h2>
        <h3></h3>
@@ -331,8 +524,8 @@ Una <code>linea base</code> es una medida ideal que creemos que mejor representa
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgb04be12" class="outline-3">
-<h3 id="orgb04be12">Limites calculados</h3>
+       <h2 class=" "><div id="outline-container-org5efabd7" class="outline-3">
+<h3 id="org5efabd7">Limites calculados</h3>
 </div>
 </h2>
        <h3></h3>
@@ -355,8 +548,8 @@ Existen estrategias para determinar la linea base:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org9896698" class="outline-3">
-<h3 id="org9896698">Tecnicas de detección</h3>
+       <h2 class=" "><div id="outline-container-orgb22fb70" class="outline-3">
+<h3 id="orgb22fb70">Tecnicas de detección</h3>
 </div>
 </h2>
        <h3></h3>
@@ -379,8 +572,8 @@ Sea cual sea la estrategia para obetenr los limites de alarma, existen diversos 
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org964abed" class="outline-3">
-<h3 id="org964abed">Alarmas de banda (Alarmas Espectrales)</h3>
+       <h2 class=" "><div id="outline-container-orgfb344e4" class="outline-3">
+<h3 id="orgfb344e4">Alarmas de banda (Alarmas Espectrales)</h3>
 </div>
 </h2>
        <h3></h3>
@@ -404,8 +597,8 @@ Se calcula el valor de vibracion (RMS, promedio, pk o pk-pk) en un rango de frec
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgaa6d210" class="outline-3">
-<h3 id="orgaa6d210">Alarmas en envolvente (Alarma de máscara)</h3>
+       <h2 class=" "><div id="outline-container-orgac001da" class="outline-3">
+<h3 id="orgac001da">Alarmas en envolvente (Alarma de máscara)</h3>
 </div>
 </h2>
        <h3></h3>
@@ -429,8 +622,8 @@ El limite de alarma se aplica al espectro completo, en vez de fraccionario en ba
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgc2bac4d" class="outline-3">
-<h3 id="orgc2bac4d">Sistemas Expertos</h3>
+       <h2 class=" "><div id="outline-container-org4c43e39" class="outline-3">
+<h3 id="org4c43e39">Sistemas Expertos</h3>
 </div>
 </h2>
        <h3></h3>
@@ -455,8 +648,8 @@ Un sistema experto esta diseñado alrededor de reglas. Por ejemplo <code>Si la v
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orge92ec32" class="outline-3">
-<h3 id="orge92ec32">Sistemas Expertos</h3>
+       <h2 class=" "><div id="outline-container-org443260f" class="outline-3">
+<h3 id="org443260f">Sistemas Expertos</h3>
 </div>
 </h2>
        <h3></h3>
@@ -480,8 +673,8 @@ Los sistemas expertos, cuando se configuran correctamente, son capaces de filtra
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgdc53805" class="outline-3">
-<h3 id="orgdc53805">Sistemas de Inteligencia Artificial</h3>
+       <h2 class=" "><div id="outline-container-org6e4f6ec" class="outline-3">
+<h3 id="org6e4f6ec">Sistemas de Inteligencia Artificial</h3>
 </div>
 </h2>
        <h3></h3>
@@ -507,8 +700,8 @@ Alimentas con una serie de datos e indicas que significan. Proceso repetitivo.
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgaf50e19" class="outline-3">
-<h3 id="orgaf50e19">Caso Especial: Velocidad y carga variable</h3>
+       <h2 class=" "><div id="outline-container-orgb10cc72" class="outline-3">
+<h3 id="orgb10cc72">Caso Especial: Velocidad y carga variable</h3>
 </div>
 </h2>
        <h3></h3>
@@ -529,10 +722,260 @@ Si no puedes controlar la velocidad de máquina, configura diferentes máquinas 
 
 </slide>
 </slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/logo-csi.png"></aside><hgroup class="">
+       <h2 class=" "><div id="outline-container-orgabb3b89" class="outline-2">
+<h2 id="orgabb3b89">Fase de Análisis</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-">
+
+
+</article>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org5590432" class="outline-3">
+<h3 id="org5590432">Fase de Análisis</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Desafortunadamente, el informe de excepción puede marcar incorrectamente una máquina con un aviso de un posible problema.
+</p>
+
+<p>
+Puede que los límites de alarma no están fijados correctamente.
+</p>
+
+<p>
+Algun cambio en la velocidad o en la carga, ruido externo puede generar una falsa alarma.
+</p>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orga8619b6" class="outline-3">
+<h3 id="orga8619b6">Fallos en el sensor</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+El problema más comun es tener fallos relacionado con el sensor. Un clasico "ski-slope" es un indicador de problema con el sensor.
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/ski-slope.jpg" alt="ski-slope.jpg" width="800px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org90bdd88" class="outline-3">
+<h3 id="org90bdd88">Picos en el espectro</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+El espectro debera contener picos. Deberas asegurarte de que exista información sobre el estado mecánico de la máquina.
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/picos.png" alt="picos.png" width="700px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org21dca8e" class="outline-3">
+<h3 id="org21dca8e">¿Son las condiciones de medida correctas?</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Asumiendo que los datos parecen <b>limpios</b>, se deben hacer las siguiente preguntas:
+</p>
+<ul>
+<li>¿Estaba la maquína funcionando bajo las condiciones correctas?</li>
+<li>¿Puede identificarse el picio a la velocidad de giro?</li>
+<li>¿Estaba funcionando a la velocidad correcta?</li>
+</ul>
+
+<p>
+Se tendra que reconocer que los datos son diferentes o bien compararlos con datos anteriores (Continuidad)
+</p>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orga24b610" class="outline-3">
+<h3 id="orga24b610">Tendencias</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Lo siguiente es revisar tendencias de <code>valores escalares</code>.
+</p>
+
+<p>
+Estos valores escalares podran ser <code>medidos o calculados</code>.
+</p>
+
+<p>
+Los datos medidos incluyen <code>lecturas de nivel global</code>, medidas de alta frecuencia en los apoyos (HFD, spike energy en unidades gSE), e incluso datos del proceso (temperatura, presión, etc)
+</p>
+
+<p>
+Los datos calculados vendran habitualmente de las <code>bandas</code>. Tendencias en las bandas a <code>1X y 2X</code> podrán ser muy útiles.
+</p>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org898c537" class="outline-3">
+<h3 id="org898c537">Tendencias</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Al ver una tendencia, la primera cosa que debemos buscar es un cambio en el nivel de amplitud, y el nivel de relativo de las alarmas prefijadas.
+</p>
+
+<p>
+Si la tendencia es practicamente plana, entonces puedes confiar en que no existe un problema potencial, por lo tanto, no es necesario continua con el análisis.
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/constante.jpg" alt="constante.jpg" width="500px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org0e325ea" class="outline-3">
+<h3 id="org0e325ea">Tendencias</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Sin embargo, si una tendencia muestra un incremento en el nivel a lo largo del tiempo, y los niveles exceden los límites de alarma, entonces se deberá prestar más atención.
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/creciente.jpg" alt="creciente.jpg" width="700px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orged0740b" class="outline-3">
+<h3 id="orged0740b">Tendencias</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Si los límites no han sido excedidos, se debe mirar la velocidad de crecimiento de la tendencia, e intentar estimar cuando se alcanzaran los límites de alarma y la severidad del problema.
+</p>
+<article class="flexbox vcenter">
+
+<div class="figure">
+<p><img src="images/estimar_tiempo.jpg" alt="estimar_tiempo.jpg" width="700px" />
+</p>
+</div>
+</article>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org789f2a4" class="outline-3">
+<h3 id="org789f2a4">Fase de analisis</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Una vez que haz repasado los datos de tendencia, en particular los datos que fueron resaltados por el informe de excepción, queda mirar detalladamente el espectro y la onda.
+</p>
+
+<p>
+Esta información, junto con los conocimientos de la máquina y el proceso (demanda de producción, disponibilidad de recambios), resultara en una decisión. 
+</p>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
 <slide id="sec-" class=" thank-you-slide segue nobackground" style="background-image: url(nil)">
 <aside class="gdbar right"><img src="images/logo-csi.png"></aside><article class="flexbox vleft auto-fadein" id="text-">
 <h2>
-  <p>Thank You ˊ・ω・ˋ</p>
+  <p>Graciasˊ・ω・ˋ</p>
 </h2>
 <br>
 <p class="auto-fadein" data-config-contact>

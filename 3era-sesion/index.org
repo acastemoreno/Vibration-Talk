@@ -16,6 +16,54 @@
 #+FAVICON: images/logo-csi.png
 #+ICON: images/logo-csi.png
 
+* Procesamiento de Señal
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+¿Qué pasa con la señal del transductor cuando es recibida por el colector de datos?
+** 
+Proceso de la señal[fn:1]
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800px
+file:images/proceso_de_señal.png
+#+END_CENTER
+** Filtros 
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 600px
+file:images/filtros.jpg
+#+END_CENTER
+** Frecuencia de muestreo (Sample Rate)
+Se hacen muestras indivuales a intervalos discretos. La frecuencia en la que la onda se muestrea se llama =Frecuencia de muestreo=. Su unidad es =Samples/S=
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+file:images/discretizacion.png
+#+END_CENTER
+** Frecuencia de muestreo - FMAX
+Si queremos detectar una frecuencia maxima de interes (=FMAX=), la =frecuencia de muestreo= debe ser por lo menos el doble de la =FMAX=. El modulo =Dynamix= toma este factor como =2.28=  
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 400px
+file:images/demostracion_frec_nyquist.jpg
+#+END_CENTER
+** Numero de muestras - Líneas de Resolución
+Existe otra relación que vincula la onda y el espectro.
+
+El =número de muestras= de la onda de tiempo determina el *espesor o la resolución del espectro*.
+
+El *espesor o resolución* esta determinado por el *número de líneas*. A este número se le conoce como =Líneas de Resolución= o =LOR=.
+** Numero de muestras - Líneas de Resolución
+2 frecuencias cuya separación entre ellas es menor a la *resolución del espectro* no podran distinguirse en el espectro.
+
+El *número de muestras* es =2.28= veces el *número de líneas* para el modulo =Dynamix=.
+** Frecuencia de muestreo - Numero de muestras
+#+BEGIN_QUOTE
+Podemos controlar 2 parámetros: la frecuencia de muestreo y el número total de muestras recolectadas. La frecuencia de muestreo se controla seleccionando el *Fmax*. El numero de muestras se define por medio de *líneas de resolución*.
+#+END_QUOTE
+#+BEGIN_QUOTE
+El tiempo que se necesita para recolectar los datos es igual al número de muestras que se requiere, dividido entre la frecuencia de muestreo.
+#+END_QUOTE
+
 * Analisis Vibracional como proceso
   :PROPERTIES:
   :SLIDE:    segue dark quote
@@ -135,12 +183,76 @@ Alimentas con una serie de datos e indicas que significan. Proceso repetitivo.
 Cuando la velocidad de la máquina varía (o la carga), los nivel de vibración tambien cambian. Tambien cambia el valor de las frecuencias que no estan relacionadas a la velocidad de maquina) como resonancia, fuentes externas de vibración, problemas electricos, etc.
 
 Si no puedes controlar la velocidad de máquina, configura diferentes máquinas (Bomba-A 1000RPM y Bomba-A 1200RPM), y aplica diferentes límites de alarma para cada una.
-* Thank You ˊ・ω・ˋ
+* Fase de Análisis
+  :PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+  :END:
+** Fase de Análisis
+Desafortunadamente, el informe de excepción puede marcar incorrectamente una máquina con un aviso de un posible problema.
+
+Puede que los límites de alarma no están fijados correctamente.
+
+Algun cambio en la velocidad o en la carga, ruido externo puede generar una falsa alarma.
+** Fallos en el sensor
+El problema más comun es tener fallos relacionado con el sensor. Un clasico "ski-slope" es un indicador de problema con el sensor.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800px
+file:images/ski-slope.jpg
+#+END_CENTER
+** Picos en el espectro
+El espectro debera contener picos. Deberas asegurarte de que exista información sobre el estado mecánico de la máquina.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+file:images/picos.png
+#+END_CENTER
+** ¿Son las condiciones de medida correctas?
+Asumiendo que los datos parecen *limpios*, se deben hacer las siguiente preguntas:
+- ¿Estaba la maquína funcionando bajo las condiciones correctas?
+- ¿Puede identificarse el picio a la velocidad de giro?
+- ¿Estaba funcionando a la velocidad correcta?
+
+Se tendra que reconocer que los datos son diferentes o bien compararlos con datos anteriores (Continuidad)
+** Tendencias
+Lo siguiente es revisar tendencias de =valores escalares=.
+
+Estos valores escalares podran ser =medidos o calculados=.
+
+Los datos medidos incluyen =lecturas de nivel global=, medidas de alta frecuencia en los apoyos (HFD, spike energy en unidades gSE), e incluso datos del proceso (temperatura, presión, etc)
+
+Los datos calculados vendran habitualmente de las =bandas=. Tendencias en las bandas a =1X y 2X= podrán ser muy útiles.
+
+** Tendencias
+Al ver una tendencia, la primera cosa que debemos buscar es un cambio en el nivel de amplitud, y el nivel de relativo de las alarmas prefijadas.
+
+Si la tendencia es practicamente plana, entonces puedes confiar en que no existe un problema potencial, por lo tanto, no es necesario continua con el análisis.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 500px
+file:images/constante.jpg
+#+END_CENTER
+** Tendencias
+Sin embargo, si una tendencia muestra un incremento en el nivel a lo largo del tiempo, y los niveles exceden los límites de alarma, entonces se deberá prestar más atención.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+file:images/creciente.jpg
+#+END_CENTER
+** Tendencias
+Si los límites no han sido excedidos, se debe mirar la velocidad de crecimiento de la tendencia, e intentar estimar cuando se alcanzaran los límites de alarma y la severidad del problema.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 700px
+file:images/estimar_tiempo.jpg
+#+END_CENTER
+** Fase de analisis
+Una vez que haz repasado los datos de tendencia, en particular los datos que fueron resaltados por el informe de excepción, queda mirar detalladamente el espectro y la onda.
+
+Esta información, junto con los conocimientos de la máquina y el proceso (demanda de producción, disponibilidad de recambios), resultara en una decisión. 
+* Graciasˊ・ω・ˋ
 :PROPERTIES:
 :SLIDE: thank-you-slide segue
 :ASIDE: right
 :ARTICLE: flexbox vleft auto-fadein
 :END:
 * Footnotes
-
+[fn:1] [[http://www.analog.com/en/analog-dialogue/articles/intro-to-mems-vibration-monitoring.html][An Introduction to MEMS Vibration Monitoring]]
  
