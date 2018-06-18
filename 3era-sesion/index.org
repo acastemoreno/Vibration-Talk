@@ -63,7 +63,38 @@ Podemos controlar 2 parámetros: la frecuencia de muestreo y el número total de
 #+BEGIN_QUOTE
 El tiempo que se necesita para recolectar los datos es igual al número de muestras que se requiere, dividido entre la frecuencia de muestreo.
 #+END_QUOTE
+** Ventana
+El =FFT= se realiza en un bloque de muestras llamado =registro de tiempo=.
 
+El *FFT* requiere que el *registro de tiempo sea continuo*. El calculo del *FFT* "asume" que los datos *continúan infinitamente antes y despues* de este bloque de datos.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800px
+file:images/muestra-continua.jpg
+#+END_CENTER
+** Ventana
+Rara vez es cierto que el registro de tiempo empieza y termina en un mismo valor.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 800px
+file:images/muestra_discontinua.jpg
+#+END_CENTER
+** Ventana
+Cuando el calculo =FFT= se realiza a una señal discontinua: Parece tener un incremento de paso en la amplitud (simulando un choque) generando un ensanchamiento de los picos dentro del espectro.[fn:2]
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 400px
+file:images/sin_window.jpg
+#+END_CENTER
+** Ventana
+Para minimizar este problema, se varía el *registro de tiempo* a fin de que los bordes son empujados a un valor fijo sin modificar el contenido de frecuencia.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 500px
+file:images/window.jpg
+#+END_CENTER
+** Promediado
+La vibración siempre cambia ligeramente y aparece ruido en las señales. Para recudir estos efectos, se aplica un promediado que ayuda a mantener la *repetitividad*. Usualmente un promedio de 4 señales.
+#+BEGIN_CENTER
+#+ATTR_HTML: :width 630px
+file:images/promediado.jpg
+#+END_CENTER
 * Analisis Vibracional como proceso
   :PROPERTIES:
   :SLIDE:    segue dark quote
@@ -255,4 +286,4 @@ Esta información, junto con los conocimientos de la máquina y el proceso (dema
 :END:
 * Footnotes
 [fn:1] [[http://www.analog.com/en/analog-dialogue/articles/intro-to-mems-vibration-monitoring.html][An Introduction to MEMS Vibration Monitoring]]
- 
+[fn:2] [[http://www.ni.com/white-paper/4844/es/#toc2][Fuga]]
